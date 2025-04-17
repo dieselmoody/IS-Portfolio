@@ -1,0 +1,45 @@
+body {
+    background-image: url('../images/bg_image.jpg');
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 1rem;
+  }
+  
+  .section {
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 10px;
+    background-color: rgb(63, 63, 63);
+  }
+  
+  img {
+    border: 2px solid white;
+    border-radius: 10px;
+  }
+  
+  footer {
+    margin-top: 2rem;
+    text-align: center;
+    color:#fff
+  }
+  
+  footer a {
+    color: #ffffff; 
+    text-decoration: none; 
+  }
+  
+  footer a:hover {
+    color: #faee44; 
+    text-decoration: underline;
+  }
+  
+
+  h1, h2 {
+    color: #419bf0;
+  }
+  

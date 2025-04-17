@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drum Kit</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    .drum-button {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      margin: 10px;
+      font-size: 1.5rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .drum-button:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Drum Kit</h1>
+  <p>Click a button or press A / S / D</p>
+  <button class="drum-button" onclick="playSound('kick')">A</button>
+  <button class="drum-button" onclick="playSound('hihat')">S</button>
+  <button class="drum-button" onclick="playSound('snare')">D</button>
+
+  <script>
+    function playSound(type) {
+      const sounds = {
+        kick: new Audio('../sounds/kick.wav'),
+        snare: new Audio('../sounds/snare.wav'),
+        hihat: new Audio('../sounds/hihat.wav'),
+      };
+      sounds[type].play();
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'a') playSound('kick');
+      if (e.key === 's') playSound('hihat');
+      if (e.key === 'd') playSound('snare');
+    });
+  </script>
+</body>
+</html>
